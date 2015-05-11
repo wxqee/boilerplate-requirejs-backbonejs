@@ -1,0 +1,23 @@
+{
+  "name": "requireBoilerplate",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-requirejs": "~0.4.4"
+  },
+  "devDependencies": {
+    "grunt-contrib-requirejs": "~0.4.4",
+    "extend": "~2.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.acxiom.com:7999/~xiwang/boilerplate-requirejs-backbonejs.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}
