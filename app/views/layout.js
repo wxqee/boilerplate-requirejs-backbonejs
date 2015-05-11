@@ -4,13 +4,14 @@
 
 define(function (require) {
     var template = require('text!templates/layout.html');
+    var i18n = require('i18n!nls/layout');
 
     var Layout = Backbone.Layout.extend({
         template: _.template(template),
 
         serialize: function () {
             return {
-                hello: 'HELLO, WORLD!! I am from Layout template.'
+                i18n: i18n
             };
         }
     });
