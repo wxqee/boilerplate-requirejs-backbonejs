@@ -2,9 +2,9 @@ module.exports = function(grunt) {
 
   var extend = require('extend');
 
-  var requireJsConfig = require('./app/_config.js').requireJsConfig;
+  var requireJsConfig = require('./src/_config.js').requireJsConfig;
   requireJsConfig = extend(requireJsConfig, {
-      baseUrl: './app',
+      baseUrl: './src',
       dir: './dist',
       modules: [
          {

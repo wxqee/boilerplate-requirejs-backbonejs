@@ -18,9 +18,11 @@ requirejs = {
     },
 };
 </script>
-<script src="app/libs/require-2.1/require.js" data-main="app/main"></script>
-<!-- for production -->
-<!-- <script src="app/libs/require-2.1/require.js" data-main="dist/main"></script> -->
-<!-- / for production -->
+
+<!-- dist for production, src for development -->
+<!--<script src="dist/libs/require-2.1/require.js" data-main="dist/main"></script>-->
+<script src="src/libs/require-2.1/require.js" data-main="src/main"></script>
+<!-- / dist for production, src for development -->
+
 </body>
 </html>
