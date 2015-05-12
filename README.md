@@ -6,9 +6,10 @@
 ### Install Node.js
 Install [Node.js](http://www.nodejs.org/) for you development environment.
 
-After installation, you can check installation by querying version:
+After installation, you can check completion by querying versions:
 
 **Windows**
+
 ```bash
 C:\Users\xiwang> npm --version
 2.7.4
