@@ -40,15 +40,29 @@ Browser [localhost:8000/](http://localhost:8000/),
 and debug over browser developer tools.
 
 ### Run Tests
-Browser [localhost:8000/test/test.html](http://localhost:8000/test/test.html),
+Browser [localhost:8000/test/test.html](http://localhost:8000/tests/tests.html),
 then you can see test results.
 
-Test codes are located over dir `PROJECT/test/tests/**/*.js`,
-and you may need to created some following `test/tests/TestCaseBoilerplate.js`.
+Or you can run tests with Grunt tool, over command line:
+
+```bash
+$ grunt test
+```
+
+Test cases can be found at `./tests/testcase/`, to be remember that edit `./tests/testsuite.js` every time when 
+you add a new test case and want it to be run. 
 
 ## Release
 Use `dist/` as application entry instead of `src/` for web page `PROJECT/index.html`.
 
+### Build JS for PRODUCTION
+Run command for distribution (src => dist).
+
+```bash
+$ grunt
+```
+
+### Edit Web Pages for PRODUCTION
 for example, in JSP server, the HTML entry file should be located somewhere else, and you may use JSP feature to select:
 * for PRODUCTION, use `dist/`
 * for DEVELOPMENT, use `src/`
@@ -61,14 +75,8 @@ for example, in JSP server, the HTML entry file should be located somewhere else
 <script src="src/libs/require-2.1/require.js" data-main="src/main"></script>
 ```
 
-### Build JS for PRODUCTION
-Run command for distribution (src => dist).
-
-```bash
-$ grunt
-```
-
 ### Files to RELEASE
 
 * index.html
 * dist
+* -- other files you added --
