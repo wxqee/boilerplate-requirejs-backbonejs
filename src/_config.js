@@ -22,14 +22,22 @@ var requireJsConfig = {
 };
 
 if (typeof exports != "undefined") {
+
     // Node.js context
     module.exports.requireJsConfig = requireJsConfig;
-}
 
-if (typeof define != "undefined") {
+} else if (typeof define != "undefined") {
+
     // Require.js context
     define(function(require) {
         requirejs.config(requireJsConfig);
     });
+
+} else if (this === window) {
+
+    // window context
+    requirejs = requireJsConfig;
+    this.requirejs = requirejs;
+
 }
 

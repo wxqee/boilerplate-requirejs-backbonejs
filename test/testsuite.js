@@ -10,13 +10,12 @@ require.config({
 var testModules = [
     // TODO: More tests here.
     'tests/MD5Test.js',
-    'tests/TestCaseBoilerplate.js'
+    'tests/TestCaseBoilerplate.js',
 ];
 
 
 require(['_config'], function () {
     require(testModules, function () {
-        // Tests run.
         QUnit.load();
         QUnit.start();
     });

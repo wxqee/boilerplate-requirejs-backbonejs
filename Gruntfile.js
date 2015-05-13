@@ -45,14 +45,15 @@ module.exports = function(grunt) {
     },  // requirejs
 
     qunit: {
-        all: {
-            options: {
-                timeout: 8000,
-                urls: [
-                    'http://localhost:8000/test/test.html'
-                ]
-            }
-        }
+        all: ['test/test.html']
+//        all: {
+//            options: {
+//                timeout: 8000,
+//                urls: [
+//                    'http://localhost:8000/test/test.html'
+//                ]
+//            }
+//        }
     },  // qunit
 
     connect: {
@@ -69,5 +70,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['requirejs']);
   grunt.registerTask('server', ['connect']);
+  grunt.registerTask('test', ['connect', 'qunit']);
 
 };
