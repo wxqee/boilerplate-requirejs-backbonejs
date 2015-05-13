@@ -9,5 +9,5 @@ define(function (require) {
         initialize: function () {
             Backbone.history.start();
         }
-    }
+    };
 });
