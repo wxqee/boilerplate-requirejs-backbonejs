@@ -18,6 +18,20 @@ C:\Users\xiwang> node --version
 v0.12.2
 ```
 
+Install `Grunt` command line tool for building.
+
+```bash
+$ npm install -g grunt-cli
+```
+
+Check `Grunt` installation completion.
+
+```bash
+C:\Users\xiwang> grunt --version
+grunt-cli v0.1.13
+grunt v0.4.5
+```
+
 ### Install project dependencies (distribution tools)
 
 ```bash
