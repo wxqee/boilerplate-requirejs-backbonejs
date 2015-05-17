@@ -1,2 +1,16 @@
 <h1><%= i18n.welcomeMessage %></h1>
 <h2><%= i18n.welcomeMessage2 %></h2>
+
+<div id="contact-main">
+    <input name="filter" type="text">
+
+    <ul id="contact-list">
+        <% for (var c in obj.contacts) { %>
+        <li><a href="javascript: void(0);"><%= c.name %></a></li>
+        <% } %>
+    </ul>
+</div>
+
+<div id="contact-details">
+    Loading...
+</div>

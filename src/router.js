@@ -12,7 +12,8 @@ define(function (require) {
         },
 
         index: function () {
-            layout.render().$el.appendTo('body');
+            $('#app').empty();
+            layout.render().$el.appendTo('#app');
         }
     });
 

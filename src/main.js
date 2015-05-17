@@ -3,7 +3,11 @@
  */
 
 require(['_config'], function () {
-    require(['underscore', 'jquery', 'backbone', 'backbone.layoutmanager'], function (_, $, Backbone) {
+    require([
+        'underscore', 'jquery', 'backbone',
+        'bootstrap', 'css!bootstrap-css', 'css!bootstrap-schema',
+        'backbone.layoutmanager', 'backbone.stickit'
+    ], function (_, $, Backbone) {
         require(['app'], function (app) {
             app.initialize();
         });
