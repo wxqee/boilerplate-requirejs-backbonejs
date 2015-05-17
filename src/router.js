@@ -3,19 +3,19 @@
  */
 
 define(function (require) {
-    var layout = require('views/layout');
+    var common      = require('common'),
+        contacts    = require('collections/contacts');
 
     var Workspace = Backbone.Router.extend({
         routes: {
-            '': 'index',
-            'index': 'index'
+            '*filter': 'setFilter'
         },
 
-        index: function () {
-            $('#app').empty();
-            layout.render().$el.appendTo('#app');
+        setFilter: function (param) {
+            common.ContactFilter = param || '';
+            contacts.trigger('filter');
         }
     });
 
-    return new Workspace();
+    return Workspace;
 });

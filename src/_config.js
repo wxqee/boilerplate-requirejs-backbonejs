@@ -29,7 +29,8 @@ var requireJsConfig = {
         "underscore": 'libs/underscore-1.8.3/underscore',
         "jquery": 'libs/jquery-1.11/jquery-1.11.2',
         "backbone.layoutmanager": 'libs/backbone-1.1.2/backbone.layoutmanager',
-        "backbone.stickit": "libs/backbone-1.1.2/backbone.stickit"
+        "backbone.stickit": "libs/backbone-1.1.2/backbone.stickit",
+        "backbone.localStorage": 'libs/backbone-1.1.2/backbone.localStorage'
     }
 };
 

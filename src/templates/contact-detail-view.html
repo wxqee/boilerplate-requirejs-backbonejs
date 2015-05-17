@@ -1,0 +1,29 @@
+
+<div class="row">
+    <div class="col-sm-12">
+        <h3><%= i18n.detail %></h3>
+    </div>
+
+    <input name="id" type="hidden" value="<%= contact.id %>">
+
+    <div class="col-sm-12">
+        <label for="name">Name</label>
+        <input class="form-control" name="name" type="text" value="<%= contact.name %>">
+    </div>
+
+    <div class="col-sm-12">
+        <label for="name">Mobile</label>
+        <input class="form-control" name="mobile" type="text" value="<%= contact.mobile %>">
+    </div>
+
+    <div class="col-sm-12">
+        <button type="submit" id="createOrUpdate" class="btn btn-default">
+            <%= contact.id ? i18n.update : i18n.create %>
+        </button>
+        <% if (contact.id)  { %>
+        <button type="button" id="delete" class="btn btn-default">
+            <%= i18n.delete %>
+        </button>
+        <% } %>
+    </div>
+</div>

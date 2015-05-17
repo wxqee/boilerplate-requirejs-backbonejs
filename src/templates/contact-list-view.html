@@ -1,0 +1,39 @@
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <h3>
+            <%= i18n.contactList %>
+            <small>
+                <a href="#/create">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            </small>
+        </h3>
+    </div>
+    <div class="col-sm-12">
+
+        <div class="input-group">
+            <input class="form-control" name="filter" id="filter" type="text" placeholder="Filter">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+            </span>
+        </div>
+
+        <div class="list-group" id="contact-list">
+            <% obj.contacts.forEach(function(c) { %>
+            <a class="list-group-item" href="javascript: void(0);">
+                <h4 class="list-group-item-heading">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <%= c.name %>
+                </h4>
+                <p class="list-group-item-text">
+                    <span class="glyphicon glyphicon-phone-alt"></span>
+                    <%= c.mobile %>
+                </p>
+            </a>
+            <% }) %>
+        </div>
+
+    </div>
+</div>

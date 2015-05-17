@@ -1,7 +1,6 @@
 define({
     "root": {
-        "welcomeMessage": "HELLO, WORLD!!",
-        "welcomeMessage2": "I am from Backbone.LayoutManager template."
+        "appName": "Contact Manager"
     },
     "zh": true
 });

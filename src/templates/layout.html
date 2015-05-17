@@ -1,16 +1,10 @@
-<h1><%= i18n.welcomeMessage %></h1>
-<h2><%= i18n.welcomeMessage2 %></h2>
 
-<div id="contact-main">
-    <input name="filter" type="text">
-
-    <ul id="contact-list">
-        <% for (var c in obj.contacts) { %>
-        <li><a href="javascript: void(0);"><%= c.name %></a></li>
-        <% } %>
-    </ul>
-</div>
-
-<div id="contact-details">
-    Loading...
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1><%= i18n.appName %></h1>
+        </div>
+        <div class="col-md-4" id="contact-main"></div>
+        <div class="col-md-8" id="contact-details"></div>
+    </div>
 </div>
