@@ -14,6 +14,9 @@
 </div>
 
 <template id="task">
-    <li>{{text}}</li>
+    <li class="{{#if checked}}checked{{/if}}" data-id="{{id}}">
+        <button class="delete">&times;</button>
+        <input class="toggle-checked" checked="{{checked}}" type="checkbox" />
+        <span class="text">{{text}}</span>
+    </li>
 </template>
-

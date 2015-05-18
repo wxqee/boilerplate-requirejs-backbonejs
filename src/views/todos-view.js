@@ -11,7 +11,9 @@ define([
         template: tplHelper.compile(tplHelper.process(template)),
 
         events: {
-            "submit .new-task": "addOne"
+            "submit .new-task": "addOne",
+            "click .toggle-checked": "toggleChecked",
+            "click .delete": "deleteOne"
         },
 
         serialize: function () {
@@ -33,10 +35,27 @@ define([
 
         addOne: function (e) {
             e.preventDefault();
-            todos.create({
+            var todo = new Todo({
                 text: this.$newTaskText.val()
             });
+            todos.create(todo.attributes);
             this.$newTaskText.val("");
+        },
+
+        toggleChecked: function (e) {
+            var id = $(e.currentTarget).closest('li').data('id');
+            todos.where({id: id}).forEach(function(todo) {
+                todo.set('checked', !todo.get('checked'));
+                todo.save();
+            });
+        },
+
+        deleteOne: function (e) {
+            var id = $(e.currentTarget).closest('li').data('id');
+            todos.where({id: id}).forEach(function(todo) {
+                todo.destroy();
+            });
+            todos.trigger('reset');
         }
     });
 
