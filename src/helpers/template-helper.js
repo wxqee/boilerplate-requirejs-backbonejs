@@ -6,7 +6,7 @@ define('helpers/template-helper', [
 
     helper.process = function (template) {
         // Use <template> tags as template partials.
-        $('<nothing>').html(template).find('template').each(function () {
+        $('<nothing>').html(template).find('script[type=template]').each(function () {
             Handlebars.registerPartial(this.id, this.innerHTML);
         }).remove();
 

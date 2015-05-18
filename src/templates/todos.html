@@ -13,10 +13,10 @@
     </ul>
 </div>
 
-<template id="task">
+<script id="task" type="template">
     <li class="{{#if checked}}checked{{/if}}" data-id="{{id}}">
         <button class="delete">&times;</button>
-        <input class="toggle-checked" checked="{{checked}}" type="checkbox" />
+        <input class="toggle-checked" type="checkbox" {{#if checked}}checked="checked"{{/if}} />
         <span class="text">{{text}}</span>
     </li>
-</template>
+</script>
