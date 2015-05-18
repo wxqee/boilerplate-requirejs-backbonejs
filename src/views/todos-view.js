@@ -26,10 +26,13 @@ define([
         afterRender: function () {
             this.$newTask = this.$('.new-task');
             this.$newTaskText = this.$('.new-task [name=text]');
+
+            // Always focus on input
+            this.$newTaskText.focus();
         },
 
         initialize: function () {
-            this.listenTo(todos, 'reset change add', this.render);
+            this.listenTo(todos, 'reset change add destroy', this.render);
             todos.fetch({reset: true});
         },
 
@@ -44,18 +47,14 @@ define([
 
         toggleChecked: function (e) {
             var id = $(e.currentTarget).closest('li').data('id');
-            todos.where({id: id}).forEach(function(todo) {
-                todo.set('checked', !todo.get('checked'));
-                todo.save();
-            });
+            var todo = todos.get(id);
+            todo.set('checked', !todo.get('checked'));
+            todo.save();
         },
 
         deleteOne: function (e) {
             var id = $(e.currentTarget).closest('li').data('id');
-            todos.where({id: id}).forEach(function(todo) {
-                todo.destroy();
-            });
-            todos.trigger('reset');
+            todos.get(id).destroy();
         }
     });
 
