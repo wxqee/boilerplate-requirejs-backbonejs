@@ -1,0 +1,22 @@
+<div class="container">
+    <header>
+        <h1>Todo List</h1>
+        <form class="new-task">
+            <input type="text" name="text" placeholder="Type to add new tasks" />
+        </form>
+    </header>
+
+    <ul>
+        {{#each tasks}}
+            {{> task}}
+        {{/each}}
+    </ul>
+</div>
+
+<script id="task" type="template">
+    <li class="{{#if checked}}checked{{/if}}" data-id="{{id}}">
+        <button class="delete">&times;</button>
+        <input class="toggle-checked" type="checkbox" {{#if checked}}checked="checked"{{/if}} />
+        <span class="text">{{text}}</span>
+    </li>
+</script>
