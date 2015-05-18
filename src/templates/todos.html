@@ -1,0 +1,16 @@
+<div class="container">
+    <header>
+        <h1>Todo List</h1>
+    </header>
+
+    <ul>
+        {{#each tasks}}
+            {{> task}}
+        {{/each}}
+    </ul>
+</div>
+
+<template id="task">
+    <li>{{text}}</li>
+</template>
+
