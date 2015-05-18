@@ -4,7 +4,10 @@
 
 require(['_config'], function () {
     require([
-        'underscore', 'jquery', 'backbone', 'backbone.layoutmanager', 'handlebars'
+        'underscore', 'jquery', 'backbone',
+//        'bootstrap', 'css!bootstrap-css', 'css!bootstrap-schema',
+        'backbone.layoutmanager', 'backbone.localStorage',
+        'handlebars'
     ], function (_, $, Backbone) {
         require(['common', 'router', 'views/todos-view'], function (common, Workspace, TodosView) {
             common.Workspace = new Workspace();

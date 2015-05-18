@@ -9,6 +9,10 @@ var requireJsConfig = {
         "backbone.layoutmanager": {
             deps: ['backbone']
         },
+        "backbone.localStorage": {
+            deps: ['backbone'],
+            exports: 'Backbone'
+        },
         "handlebars": {
             exports: "Handlebars"
         }
