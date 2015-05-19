@@ -1,11 +1,12 @@
 
 define([
+    'i18n!nls/todos',
     'helpers/template-helper',
     'text!templates/todos.html',
     'collections/todos',
     'models/todo',
     'css!templates/todos'
-], function (tplHelper, template, todos, Todo) {
+], function (i18n, tplHelper, template, todos, Todo) {
 
     var TodosView = Backbone.Layout.extend({
         template: tplHelper.compile(tplHelper.process(template)),
@@ -18,6 +19,7 @@ define([
 
         serialize: function () {
             return {
+                i18n: i18n,
                 tasks: todos.toJSON()
             };
         },
