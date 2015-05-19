@@ -4,7 +4,7 @@ define('helpers/template-helper', [
 ], function (Handlebars) {
     var helper = {};
 
-    helper.process = function (template) {
+    var preProcess = function (template) {
         // Use <template> tags as template partials.
         $('<nothing>').html(template).find('script[type=template]').each(function () {
             Handlebars.registerPartial(this.id, this.innerHTML);
@@ -15,7 +15,7 @@ define('helpers/template-helper', [
     }
 
     helper.compile = function (template) {
-        return Handlebars.compile(template);
+        return Handlebars.compile(preProcess(template));
     }
 
     helper.addHelper = function (name, fn) {

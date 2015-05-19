@@ -9,7 +9,7 @@ define([
 ], function (i18n, tplHelper, template, todos, Todo) {
 
     var TodosView = Backbone.Layout.extend({
-        template: tplHelper.compile(tplHelper.process(template)),
+        template: tplHelper.compile(template),
 
         events: {
             "submit .new-task": "addOne",
