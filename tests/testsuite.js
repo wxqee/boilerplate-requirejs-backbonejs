@@ -13,7 +13,7 @@ var testModules = [
     // TODO: More tests here.
     'testcase/MD5Test.js',
     'testcase/TestCaseBoilerplate.js',
-    'testcase/nls/layoutTest.js'
+    'testcase/nls/todosTest.js'
 ];
 
 require(['_config'], function () {
