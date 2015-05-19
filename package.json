@@ -1,6 +1,6 @@
 {
   "name": "boilerplate-requirejs-backbonejs",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "",
   "devDependencies": {
     "extend": "~2.0.1",
@@ -18,5 +18,5 @@
     "url": "https://github.com/wxqee/boilerplate-requirejs-backbonejs.git"
   },
   "author": "Wang Xiaoqiang <xq21@163.com>",
-  "license": "Open Source"
+  "license": "Opend Source"
 }

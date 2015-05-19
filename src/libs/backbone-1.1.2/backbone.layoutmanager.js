@@ -1078,7 +1078,7 @@ var defaultOptions = {
 
   // Based on:
   // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-  // requestAnimationFrame polyfill by Erik M  ller. fixes from Paul Irish and
+  // requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and
   // Tino Zijdel.
   requestAnimationFrame: (function() {
     var lastTime = 0;

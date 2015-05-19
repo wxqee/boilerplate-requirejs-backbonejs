@@ -5,11 +5,17 @@
 require(['_config'], function () {
     require([
         'underscore', 'jquery', 'backbone',
-        'bootstrap', 'css!bootstrap-css', 'css!bootstrap-schema',
-        'backbone.layoutmanager', 'backbone.stickit'
+//        'bootstrap', 'css!bootstrap-css', 'css!bootstrap-schema',
+        'backbone.layoutmanager', 'backbone.localStorage',
+        'handlebars'
     ], function (_, $, Backbone) {
-        require(['app'], function (app) {
-            app.initialize();
+        require(['common', 'router', 'views/todos-view'], function (common, Workspace, TodosView) {
+            common.Workspace = new Workspace();
+            Backbone.history.start();
+
+            var todosView = new TodosView({
+                el: 'body'
+            }).render();
         });
     });
 });
