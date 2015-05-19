@@ -11,17 +11,19 @@ module.exports = function(grunt) {
           name: '_config',
           include: [
             // TODO: add more libs
+            'handlebars',
             'jquery',
             'underscore',
             'backbone',
-            'backbone.layoutmanager'
+            'backbone.layoutmanager',
+            'backbone.localStorage'
           ]
         },
         {
           name: 'main',
           include: [
             // TODO: add more modules
-            'app', 'router'
+            'router', 'common'
           ],
           exclude: [
             '_config'
