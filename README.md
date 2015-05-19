@@ -50,11 +50,11 @@ $ grunt server
 ```
 
 ### Run Application
-Browser [localhost:8000/](http://localhost:8000/),
+Browser [http://localhost:8000/](http://localhost:8000/),
 and debug over browser developer tools.
 
 ### Run Tests
-Browser [localhost:8000/test/test.html](http://localhost:8000/tests/tests.html),
+Browser [http://localhost:8000/tests/tests.html](http://localhost:8000/tests/tests.html),
 then you can see test results.
 
 Or you can run tests with Grunt tool, over command line:
