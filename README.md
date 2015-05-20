@@ -50,11 +50,11 @@ $ grunt server
 ```
 
 ### Run Application
-Browser [localhost:8000/](http://localhost:8000/),
+Browser [http://localhost:8000/](http://localhost:8000/),
 and debug over browser developer tools.
 
 ### Run Tests
-Browser [localhost:8000/test/test.html](http://localhost:8000/tests/tests.html),
+Browser [http://localhost:8000/tests/tests.html](http://localhost:8000/tests/tests.html),
 then you can see test results.
 
 Or you can run tests with Grunt tool, over command line:
@@ -65,6 +65,12 @@ $ grunt test
 
 Test cases can be found at `./tests/testcase/`, to be remember that edit `./tests/testsuite.js` every time when 
 you add a new test case and want it to be run. 
+
+#### Add Test Case
+
+1. In folder `./tests/testcase/`, copy file `TestCaseBoilerplate.js` and rename it
+1. Modify the test logic following **TODO** items in it.
+1. Back to `./tests/testsuite.js`, add new TestCase name into the testsuite.
 
 ## Release
 Use `dist/` as application entry instead of `src/` for web page `PROJECT/index.html`.
