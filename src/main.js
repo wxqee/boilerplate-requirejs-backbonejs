@@ -11,8 +11,7 @@ require(['common', '_config'], function (common) {
 
     require([
         'underscore', 'jquery', 'backbone', 'bootstrap',
-        'backbone.layoutmanager', 'backbone.localStorage',
-        'handlebars'
+        'backbone.layoutmanager', 'backbone.localStorage'
     ], function (_, $, Backbone) {
         _.templateSettings = {
           interpolate: /\{\{(.+?)\}\}/g,
