@@ -7,18 +7,15 @@
     </header>
 
     <ul>
-        {{#each tasks}}
-            {{> task}}
-        {{/each}}
+        <% [].forEach.call(tasks, function(t) { %>
+        <li class="<% if(t.checked){ %>checked<% } %>" data-id="{{t.id}}">
+            <button class="delete">&times;</button>
+            <input class="toggle-checked" type="checkbox" <% if(t.checked){ %>checked<% } %>>
+            <span class="text">{{t.text}}</span>
+        </li>
+        <% }) %>
     </ul>
 </div>
 
 <div id="locale-container"></div>
 
-<script id="task" type="template">
-    <li class="{{#if checked}}checked{{/if}}" data-id="{{id}}">
-        <button class="delete">&times;</button>
-        <input class="toggle-checked" type="checkbox" {{#if checked}}checked="checked"{{/if}} />
-        <span class="text">{{text}}</span>
-    </li>
-</script>
