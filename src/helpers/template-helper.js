@@ -1,9 +1,26 @@
 
-define('helpers/template-helper', [
-    'handlebars'
-], function (Handlebars) {
+define([
+    'handlebars',
+    'common'
+], function (Handlebars, common) {
     var helper = {};
 
+    /* TODO: register helpers here. */
+    Handlebars.registerHelper('formatInt', function (val) {
+        return new Handlebars.SafeString(common.formatIntWithComma(
+            Handlebars.Utils.escapeExpression(val)
+        ));
+    });
+
+    Handlebars.registerHelper('ifEqual', function (l, r, options) {
+        if (l == r) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    });
+
+    /* Do NOT change this codes */
     var preProcess = function (template) {
         // Use <template> tags as template partials.
         $('<nothing>').html(template).find('script[type=template]').each(function () {

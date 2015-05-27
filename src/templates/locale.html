@@ -1,0 +1,5 @@
+<select name="language">
+    {{#each languages}}
+    <option value="{{name}}" {{#ifEqual name ../locale}}selected{{/ifEqual}}>{{displayName}}</option>
+    {{/each}}
+</select>

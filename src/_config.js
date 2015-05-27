@@ -1,6 +1,14 @@
 
 var requireJsConfig = {
+
+    /* TODO: remove bust=xx in production. */
     urlArgs: "bust=" +  (new Date()).getTime(),
+
+    map: {
+      "*": {
+        "css": "libs/require-2.1/css"
+      }
+    },
 
     shim: {
         "backbone": {
@@ -12,6 +20,9 @@ var requireJsConfig = {
         "backbone.localStorage": {
             deps: ['backbone'],
             exports: 'Backbone'
+        },
+        "bootstrap": {
+            deps: ['jquery']
         },
         "handlebars": {
             exports: "Handlebars"

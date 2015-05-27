@@ -124,3 +124,11 @@ header .hide-completed {
     padding-bottom: 5px;
   }
 }
+
+/* by wang xiaoqiang */
+
+#locale-container {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}

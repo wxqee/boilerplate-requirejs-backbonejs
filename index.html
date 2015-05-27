@@ -11,11 +11,15 @@
 
 <script src="js/helpers.js"></script>
 <script>
-/*
- * Global Require.js config items here.
- */
+/* i18n works with module <views/locale-view> */
+var locale = localStorage.getItem('locale');
+if (!locale) {
+    locale = String.prototype.toLowerCase.call(navigator.language || navigator.userLanguage);
+    localStorage.setItem('locale', locale);
+}
+
 requirejs = {
-    config: { i18n: { locale: 'zh' } },
+    config: { i18n: { locale: locale } }
 };
 </script>
 

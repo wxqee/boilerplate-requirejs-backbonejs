@@ -16,6 +16,7 @@ module.exports = function(grunt) {
             'underscore',
             'backbone',
             'backbone.layoutmanager',
+            'backbone.stickit',
             'backbone.localStorage'
           ]
         },
