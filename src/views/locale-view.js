@@ -1,9 +1,8 @@
 define([
-    'text!templates/locale.html',
-    'helpers/template-helper'
-], function(template, tplHelper) {
+    'text!templates/locale.html'
+], function(template) {
     var LocaleView = Backbone.Layout.extend({
-        template: tplHelper.compile(template),
+        template: _.template(template),
         serialize: function () {
             return {
                 locale: this.getLocale(),
