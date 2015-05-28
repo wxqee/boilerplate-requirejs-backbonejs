@@ -18,7 +18,9 @@ require(['common', '_config'], function (common) {
           evaluate: /<%(.+?)%>/g
         };
 
-        require(['common', 'router', 'views/todos-view'], function (common, Workspace, TodosView) {
+        require([
+            'common', 'router', 'views/todos-view', 'helpers/underscore-helper'
+        ], function (common, Workspace, TodosView) {
             common.Workspace = new Workspace();
             Backbone.history.start();
 
