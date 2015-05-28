@@ -8,25 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
-<script src="js/helpers.js"></script>
-<script>
-/* i18n works with module <views/locale-view> */
-var locale = localStorage.getItem('locale');
-if (!locale) {
-    locale = String.prototype.toLowerCase.call(navigator.language || navigator.userLanguage);
-    localStorage.setItem('locale', locale);
-}
-
-requirejs = {
-    config: { i18n: { locale: locale } }
-};
-</script>
-
-<!-- dist for production, src for development -->
-<!--<script src="dist/libs/require-2.1/require.js" data-main="dist/main"></script>-->
+<script> App = { env: 'prod' }; </script>
+<script src="js/init.js"></script>
 <script src="src/libs/require-2.1/require.js" data-main="src/main"></script>
-<!-- / dist for production, src for development -->
-
 </body>
 </html>
