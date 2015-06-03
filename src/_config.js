@@ -23,6 +23,7 @@ var requireJsConfig = {
         "i18n": 'libs/require-2.1/i18n',
         "text": 'libs/require-2.1/text',
         "css": 'libs/require-2.1/css',
+        'md5': 'libs/md5/md5',
         "bootstrap": 'libs/bootstrap-3.3.4-dist/js/bootstrap',
         "bootstrap-css": 'libs/bootstrap-3.3.4-dist/css/bootstrap',
         "bootstrap-schema": 'libs/bootstrap-3.3.4-dist/css/bootstrap-theme',
