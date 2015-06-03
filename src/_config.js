@@ -1,7 +1,5 @@
 
 var requireJsConfig = {
-    urlArgs: "bust=" +  (new Date()).getTime(),
-
     shim: {
         "backbone": {
             deps: ['underscore', 'jquery']
@@ -9,12 +7,15 @@ var requireJsConfig = {
         "backbone.layoutmanager": {
             deps: ['backbone']
         },
+        "backbone.stickit": {
+            deps: ['backbone']
+        },
         "backbone.localStorage": {
             deps: ['backbone'],
             exports: 'Backbone'
         },
-        "handlebars": {
-            exports: "Handlebars"
+        "bootstrap": {
+            deps: ['jquery']
         }
     },
 

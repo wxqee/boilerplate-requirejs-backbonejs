@@ -1,0 +1,12 @@
+<% function _locale(l) { %>
+<option value="{{l.name}}" <% if(l.name == obj.locale) { %>selected <% } %>>{{l.displayName}}</option>
+<% } %>
+
+<div class="input-group"><!-- language selector -->
+    <div class="input-group-addon">
+        <span class="glyphicon glyphicon-flag"></span>
+    </div>
+    <select class="form-control" name="language">
+        <% languages.forEach(_locale) %>
+    </select>
+</div><!-- / language selector -->

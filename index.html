@@ -8,21 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
-<script src="js/helpers.js"></script>
-<script>
-/*
- * Global Require.js config items here.
- */
-requirejs = {
-    config: { i18n: { locale: 'zh' } },
-};
-</script>
-
-<!-- dist for production, src for development -->
-<!--<script src="dist/libs/require-2.1/require.js" data-main="dist/main"></script>-->
+<script> App = { env: 'prod' }; </script>
+<script src="js/init.js"></script>
 <script src="src/libs/require-2.1/require.js" data-main="src/main"></script>
-<!-- / dist for production, src for development -->
-
 </body>
 </html>

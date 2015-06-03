@@ -1,15 +1,14 @@
 
 define([
     'i18n!nls/todos',
-    'helpers/template-helper',
     'text!templates/todos.html',
     'collections/todos',
     'models/todo',
-    'css!templates/todos'
-], function (i18n, tplHelper, template, todos, Todo) {
+    'views/locale-view'
+], function (i18n, template, todos, Todo, LocaleView) {
 
     var TodosView = Backbone.Layout.extend({
-        template: tplHelper.compile(template),
+        template: _.template(template),
 
         events: {
             "submit .new-task": "addOne",
@@ -24,6 +23,9 @@ define([
             };
         },
 
+        views: {
+            '#locale-container': new LocaleView()
+        },
 
         afterRender: function () {
             this.$newTask = this.$('.new-task');

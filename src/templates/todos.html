@@ -1,22 +1,22 @@
+<% function _task(t) { %>
+<li class="<% if(t.checked){ %>checked<% } %>" data-id="{{t.id}}">
+    <button class="delete">&times;</button>
+    <input class="toggle-checked" type="checkbox" <% if(t.checked){ %>checked<% } %>>
+    <span class="text">{{t.text}}</span>
+</li>
+<% } %>
+
 <div class="container">
     <header>
-        <h1>{{i18n.title}}</h1>
+        <h1>{{_.Helpers.toUpperCase(i18n.title)}}</h1>
         <form class="new-task">
             <input type="text" name="text" placeholder="{{i18n.descAddTask}}" />
         </form>
     </header>
 
     <ul>
-        {{#each tasks}}
-            {{> task}}
-        {{/each}}
+        <% tasks.forEach(_task) %>
     </ul>
 </div>
 
-<script id="task" type="template">
-    <li class="{{#if checked}}checked{{/if}}" data-id="{{id}}">
-        <button class="delete">&times;</button>
-        <input class="toggle-checked" type="checkbox" {{#if checked}}checked="checked"{{/if}} />
-        <span class="text">{{text}}</span>
-    </li>
-</script>
+<div id="locale-container"></div>
